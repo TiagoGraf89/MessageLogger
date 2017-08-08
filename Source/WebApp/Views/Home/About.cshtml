@@ -1,0 +1,11 @@
+﻿@model WebApp.Models.ApplicationModel
+@{
+    ViewBag.Title = "About Me";
+}
+
+<div class="jumbotron">
+    <h1>Message Logger</h1>
+    <br />
+    <p>ApplicationId: @Html.ValueFor(a => a.Application_Id)</p>
+    <p>Secret: @Html.ValueFor(a => a.Secret)</p>
+</div>

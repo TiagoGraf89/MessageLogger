@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Message Logger</h1>
+    <br/>
+@if (!Request.IsAuthenticated)
+{
+    <p class="lead">Please @Html.ActionLink("Log in", "Login", "Account") to use the app!</p>
+    <p>Don't have an account? register @Html.ActionLink("here!", "Register", "Account")</p>
+}
+else
+{
+    <p class="lead">Welcome!</p>
+    <p>Go to @Html.ActionLink("Messages log page.", "Message", "Home")</p>
+}
+</div>
